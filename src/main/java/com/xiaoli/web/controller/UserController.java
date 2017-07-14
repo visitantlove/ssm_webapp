@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/user")
@@ -53,9 +55,14 @@ public class UserController {
     }
 
     @RequestMapping("/demo")
-    public @ResponseBody String demo(@RequestBody String username, String age, String sex) {
+    @ResponseBody
+    public Map<String, Object> demo(String username, String age, String sex) {
         System.out.println("======================" + username + "\t" + age + "\t" + sex);
-        return username;
+        Map<String, Object> map = new HashMap<>();
+        map.put("name", username);
+        map.put("age", age);
+        map.put("sex", sex);
+        return map;
     }
 
 }
