@@ -18,7 +18,7 @@ import java.util.Map;
 @Controller
 @RequestMapping("/user")
 public class UserController {
-    private Logger log = Logger.getLogger(UserController.class);
+    private Logger log = Logger.getLogger("reqLogger");
 
     @Autowired
     private UserService userService;
@@ -26,6 +26,7 @@ public class UserController {
     @RequestMapping("/showAll")
     public String showAll(Model model) {
         log.info("查询所有用户信息");
+        log.debug("dddddddddddddddddddddd");
         List<User> userList = userService.selectAllUser();
         model.addAttribute("userList", userList);
         return "userinfo";
