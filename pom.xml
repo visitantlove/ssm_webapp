@@ -213,6 +213,16 @@
         </dependency>
         <!--aspectj end-->
 
+        <!--mvn package时将本地依赖包打进war包-->
+        <!--<dependency>-->
+            <!--<groupId>com.xiaoli.web</groupId>-->
+            <!--<artifactId>ssm-webapp</artifactId>-->
+            <!--<version>1.0-SNAPSHOT</version>-->
+            <!--<scope>system</scope>-->
+            <!--<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/xxx.jar</systemPath>-->
+        <!--</dependency>-->
+
+
     </dependencies>
 
     <build>
