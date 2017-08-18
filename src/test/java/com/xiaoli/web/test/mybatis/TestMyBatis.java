@@ -24,7 +24,7 @@ public class TestMyBatis {
     private static Logger logger = Logger.getLogger(TestMyBatis.class);
 
     @Resource
-    private UserService userService = null;
+    private UserService userService;
 
     @Test
     public void test1() {
