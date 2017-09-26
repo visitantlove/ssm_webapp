@@ -1,6 +1,7 @@
 .idea
 target/
 classes/
+src/test/
 *iml
 
 # Compiled class file
